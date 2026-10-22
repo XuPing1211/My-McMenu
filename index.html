@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#202a28" />
+    <meta name="description" content="My McMenu｜麦门私人菜单册，粉丝与真实菜单数据共创的数字菜单册。" />
+    <title>My McMenu｜麦门私人菜单册</title>
+    <style>
+      .file-protocol-help { max-width: 680px; margin: 12vh auto; padding: 32px; color: #f3ecdc; background: #202a28; font-family: Arial, "Microsoft Yahei", sans-serif; line-height: 1.7; }
+      .file-protocol-help h1 { margin-top: 0; color: #f5bd45; }
+      .file-protocol-help code { padding: 3px 6px; color: #202a28; background: #f5bd45; }
+      .file-protocol-help pre { padding: 16px; overflow-x: auto; color: #f3ecdc; background: #293532; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.getElementById('root').innerHTML = `
+          <section class="file-protocol-help">
+            <h1>My McMenu 需要通过本地服务打开</h1>
+            <p>你现在是直接双击 <code>file://</code> 文件。React/Vite 的模块文件会被浏览器安全策略拦截，所以页面会显示空白。</p>
+            <p>请在此文件夹打开 PowerShell，运行：</p>
+            <pre>bun run dev</pre>
+            <p>然后访问 <code>http://127.0.0.1:4173</code>。</p>
+            <p>也可以双击项目根目录的 <strong>OPEN_DEMO.bat</strong> 自动启动并打开页面。</p>
+          </section>`;
+      }
+    </script>
+    <script type="module" src="/src/web/main.tsx"></script>
+  </body>
+</html>
